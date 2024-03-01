@@ -1,0 +1,32 @@
+<div class="row">
+    <h1>Server 1</h1>
+    <div class="col-ms-12">
+      <input type="text" class="form-control" [(ngModel)] = "newserverName">
+    </div>
+
+    <h1>Server 2</h1>
+    <div class="col-ms-12">
+      <input type="text" class="form-control" [(ngModel)]= "newserverContent">
+    </div>
+    <div>
+      <h1>Local Reffernce</h1>
+      <div><input type="text" class="form-control" #servercount></div>
+    </div>
+
+    <div>
+      <h1>Accessing Elements using ViewChild:
+        <div><input type="text" class="form-control" #ServerInputChild></div>
+      </h1>
+    </div>
+  </div>
+
+  <hr>
+  <button class="btn btn-primary" (click)="addServer()">Add Server</button><span>  </span>
+  <button class="btn btn-primary"(click)="addBluePrint()">Add BluePrint</button>
+  <button class="btn btn-primary" (click)="addLocalRefference(servercount)">Add Local Reffernce</button>  
+  <h1>This is input value passed by local refference {{input}}</h1>
+  <h1>{{ serverInc1 }}</h1>
+
+
+ 
+

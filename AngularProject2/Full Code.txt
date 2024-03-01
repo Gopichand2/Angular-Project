@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <h1>Server 1</h1>
+    <div class="col-ms-12">
+      <input type="text" class="form-control" [(ngModel)] = "serverName">
+    </div>
+
+    <h1>Server 2</h1>
+    <div class="col-ms-12">
+      <input type="text" class="form-control" [(ngModel)]= "serverContent">
+    </div>
+  </div>
+  <hr>
+  <button class="btn btn-primary" (click)="addServer()">Add Server</button><span>  </span>
+  <button class="btn btn-primary"(click)="addBluePrint()">Add BluePrint</button>
+
+
+
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div
+      class = "panel panel-default"
+      *ngFor="let element of ServerElements">
+      <div class="panel-heading">
+        {{element.name}}</div>
+        <div class="panel-body">
+          <p>
+            <strong *ngIf="element.type === 'server'" style="color: blue;">{{ element.content}}</strong>
+            <em><strong *ngIf="element.type === 'Blueprint'" style="color: red;">{{ element.content }}</strong>
+            </em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</div>
