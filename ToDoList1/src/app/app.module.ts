@@ -7,8 +7,8 @@ import { DeleteNoteComponent } from './delete-note/delete-note.component';
 import { EditNoteComponent } from './edit-note/edit-note.component';
 import { HomeComponent } from './home/home.component';
 import { NoteService } from './note-service.service';
-
-
+import { FormsModule } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 const routes : Routes =[
   { path : '', redirectTo :'/Home', pathMatch : 'full'},
@@ -16,6 +16,7 @@ const routes : Routes =[
   { path : 'Add', component : AddNoteComponent},
   { path : 'Delete', component : DeleteNoteComponent},
   { path : 'Edit', component : EditNoteComponent}
+
 ]
 
 @NgModule({
@@ -28,7 +29,8 @@ const routes : Routes =[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
   ],
   providers: [
     provideClientHydration(),
