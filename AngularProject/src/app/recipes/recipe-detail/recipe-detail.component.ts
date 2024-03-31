@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { Recipe } from "../recipe.model";
 
 @Component({
     selector: 'app-recipe-detail',
@@ -6,6 +7,11 @@ import { Component } from "@angular/core";
 })
 
 
-export class RecipesDetailComponent{
+export class RecipesDetailComponent implements OnInit{
+    @Input() recipe : Recipe;
 
+    constructor(){}
+    ngOnInit(): void {
+        
+    }
 }

@@ -1,0 +1,14 @@
+Sample Project:
+1st Component:
+	 Header : completed.
+
+2nd component: List
+	Need to get using @input Decorator from AddItem component
+
+
+3rd component: AddItem:
+	should add navigate function using routes and send data to the list using the @output Decorator 
+
+
+4th component: Edit Item
+	Bind the text to the array data save using property binding

@@ -1,0 +1,49 @@
+
+
+.container1{
+    margin: auto;
+    border-color: black;
+    justify-content: space-between;
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px;
+}
+
+.MainPage{
+    margin-top: 20px;
+    
+}
+
+
+.home{
+    color: white;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-bottom: thick solid white;
+    border-top: thick solid brown;
+}
+
+.home button{
+    margin: 5px;
+}
+
+.header.select{
+    display: flex;
+    align-self: flex-end;
+}
+
+select{
+    border: white;
+}
+
+h1{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 30px;
+    font-style: normal;
+  }
+  

@@ -1,15 +1,15 @@
+
 <h1>Hi, This is Recipes Component</h1>
 <div class="row">
     <div class="col-md-5">
-        <app-recipe-List></app-recipe-List>
+        <app-recipe-List  (RecipeWasSelected)="selectedRecipe = $event"></app-recipe-List>
     </div>
     <div class="col-md-4" style="align-items: center;">
-        <app-recipe-detail></app-recipe-detail>
+        <app-recipe-detail
+        *ngIf="selectedRecipe; else infoText"
+        [recipe]="onRecipeSelected"></app-recipe-detail> 
+        <ng-template #infoText>
+            <p>Please select The recipe</p>
+        </ng-template>       
     </div>
-
-    <div class="col-md-3">
-        <img src="https://media.tenor.com/55FCZyd1ev0AAAAi/tasty-food-chhota-bheem.gif" alt="Cute cat">
-    </div>
-
-    <app-shopping-list></app-shopping-list>
 </div>

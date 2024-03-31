@@ -8,4 +8,11 @@ import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
   title = 'AngularProject';
+  featureSelected  ='Recipe';
+
+  onFeatureSelect(feature : string){
+    this.featureSelected = feature;
+  }
+
+  
 }
